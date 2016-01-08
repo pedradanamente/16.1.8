@@ -1,0 +1,12 @@
+Extrair msvcr110.dll do msvcr110.zip. Recomendamos que você extraia msvcr110.dll para a instalação do programa que está solicitando msvcr110.dll.
+Se isso não funcionar, você terá que extrair o msvcr110.dll para o diretório do sistema. Por padrão, isto é:
+C:\Windows\System (Windows 95/98/Me)
+C:\WINNT\System32 (Windows NT/2000)
+C:\Windows\System32 (Windows XP, Vista, 7)
+Se você utilize uma versão de 64-bit do Windows, deverá também salvar o msvcr110.dll em C:\Windows\SysWOW64\
+Certifique-se de substituir os arquivos existentes (mas faça uma cópia de backup do arquivo original).
+Reinicie o computador.
+Se o problema persistir, tente o seguinte:
+Abra o Windows no menu Iniciar e selecione "Executar ...".
+Digite CMD e clique em Enter (ou se você utiliza Windows ME, digite COMMAND)).
+Digite regsvr32 msvcr110.dll e clique em Enter.

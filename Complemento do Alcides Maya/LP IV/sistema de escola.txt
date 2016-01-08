@@ -1,0 +1,21 @@
+Banco de dados : Escola
+tabela	       : Aluno
+(mat,nome,curso,turma,media)  PK=mat
+
+Aluno => consulta-se, altera nome apenas
+
+Professor => consulta todos os alunos, insere exclui e altera media 
+
+Secretaria => Consulta todos os alunos, insere exclui e altera media, insere aluno, exclui aluno, consulta um aluno por vez, etc.
+
+class Aluno{
+
+}
+class Professor extends Aluno{
+
+}
+class Secretaria extends Professor{
+
+}
+
+

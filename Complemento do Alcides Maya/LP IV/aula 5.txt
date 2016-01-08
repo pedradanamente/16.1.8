@@ -1,0 +1,6 @@
+public: utilizado em todo o sistema
+
+protected:
+def. pacote: um arquivo que contem todas as classes utilizado somente no pacote
+
+private: utilizado somento na classe onde ele está bem definido.

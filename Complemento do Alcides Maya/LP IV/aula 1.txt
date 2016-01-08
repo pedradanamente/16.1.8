@@ -1,0 +1,90 @@
+	Criando script conectar
+<?php
+$con = mysql_connect("localhost","root","") or die("Erro ao conectar, tente novamente mais tarde");
+mysql_select_db("manutencao")or die("Banco invalido");
+echo "Estabelecido";
+?>
+
+	Consultando nome e endereço de um DB
+Sem parametros
+<?php
+$con = mysql_connect("localhost","root","") or die("Erro ao conectar, tente novamente mais tarde");
+mysql_select_db("manutencao")or die("Banco invalido");
+echo "Estabelecido";
+$conectar="SELECT nome,endereco FROM cliente";
+$conect =mysql_query($conectar) or die("Campos não encontrados");
+while($linha=mysql_fetch_assoc($conect)){
+echo "Nome: ".($linha['nome'])."<br>";;
+echo "Endereço: ".($linha['endereco'])."<br>";;
+echo "<br><br>";
+}
+?>
+Com parametros
+<?php
+$con = mysql_connect("localhost","root","") or die("Erro ao conectar, tente novamente mais tarde");
+mysql_select_db("manutencao")or die("Banco invalido");
+echo "Estabelecido";
+$conectar="SELECT nome,endereco FROM cliente WHERE cidade='Porto Alegre'";
+$conect =mysql_query($conectar) or die("Campos não encontrados");
+while($linha=mysql_fetch_assoc($conect)){
+echo "Nome: ".($linha['nome'])."<br>";;
+echo "Endereço: ".($linha['endereco'])."<br>";;
+echo "<br><br>";
+}
+?>
+
+	Pedindo ao usuario digitar um parametro para mostrar o DB
+
+<form id="form1" name="form1" method="post" action="">
+  <p>Digitre a cidade de aonde que sejam listadas as pessoas: 
+    <input type="text" name="cidade" id="textfield" />
+</p>
+  <p>
+    <input type="submit" name="button" id="button" value="Consulta" />
+</p>
+</form>
+<p>
+  <?php
+$cidade=$_POST['cidade'];
+$con = mysql_connect("localhost","root","") or die("Erro ao conectar, tente novamente mais tarde");
+mysql_select_db("manutencao")or die("Banco invalido");
+echo "Estabelecido";
+echo "<br><br>";
+$conectar="SELECT nome,endereco FROM cliente WHERE cidade='$cidade'";
+$conect =mysql_query($conectar) or die("Campos não encontrados");
+while($linha=mysql_fetch_assoc($conect)){
+echo "Nome: ".($linha['nome'])."<br>";;
+echo "Endereço: ".($linha['endereco'])."<br>";;
+echo "<br><br>";
+}
+?>
+
+
+	INCLUIR OBJETO NO DB
+<?php
+$idcli=$_GET['idcli'];
+$con = mysql_connect("localhost","root","") or die("Erro ao conectar, tente novamente mais tarde");
+mysql_select_db("manutencao")or die("Banco invalido");
+$incluir = "INSERT INTO cliente(nome,endereco,cidade,bairro,uf) VALUES('LULU SANTOS','THE VOICE','RIO','perdida','RJ')";
+$result = mysql_query($incluir) or die ("Como uma onda!!!");
+echo "dados incluidos com sucesso!";
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

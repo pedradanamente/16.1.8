@@ -1,0 +1,26 @@
+@charset "utf-8";
+#menu ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+#menu a {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	color: #FFFF00;
+	text-decoration: none;
+	display: block;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 5px;
+	background-image: url(botao.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+#menu a:hover {
+	color: #000000;
+	background-image: url(botao-hover.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+}

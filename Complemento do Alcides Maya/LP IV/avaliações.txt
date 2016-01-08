@@ -1,0 +1,10 @@
+Avaliações
+1ª prova escrita, dissertativa. Peso 5.
+2ª Trabalho final: máximo em dupla.  PESO 5
+	* Site ( PHP orientad a objeto, banco de dados e layout de WEBIII).
+	  a. consulta
+	  b. inclusão
+	  c. alteração
+	  d. excluir
+	  e. Forume página de amigos.
+	  f. upload de imagens e outros arquivos
